@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio pf Shams Alsaffar, a Java Deveolper">
+    <title>Projects - Shams ALSAFFAR</title>
+    <link rel="stylesheet" href="style.css"> <!--Link to the css file -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!--för att visa ico brevid name -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body class="projects-page">
+    <header>
+       
+        <nav>
+            <div class="left-nav">
+             <ul>
+                 <li><a href="#" class="menu-link" data-section="portfolio">SHAMS ALSAFFAR</a></li>   
+             </ul>
+            </div>
+            <div class="right-nav">
+             <ul>
+                 <li><a href="about.html" class="menu-link" data-section="about-me">About Me</a></li>
+                 <li><a href="contact.html" class="menu-link" data-section="contact">Contact Me</a></li>   
+             </ul>
+         </div>
+         </nav>
+       
+        </header>
+        <main>
+                
+            <section class="projects-section">
+                <h2 class="project-title">
+                  <span class="text-shadow-drop-bottom" style="--i:1">M</span>
+                  <span class="text-shadow-drop-bottom" style="--i:2">y</span>
+                  <span class="text-shadow-drop-bottom" style="--i:3"> </span>
+                  <span class="text-shadow-drop-bottom" style="--i:4">P</span>
+                  <span class="text-shadow-drop-bottom" style="--i:5">r</span>
+                  <span class="text-shadow-drop-bottom" style="--i:6">o</span>
+                  <span class="text-shadow-drop-bottom" style="--i:7">j</span>
+                  <span class="text-shadow-drop-bottom" style="--i:8">e</span>
+                  <span class="text-shadow-drop-bottom" style="--i:9">c</span>
+                  <span class="text-shadow-drop-bottom" style="--i:10">t</span>
+                  <span class="text-shadow-drop-bottom" style="--i:11">s</span>
+                </h2>
+              
+                <p class="project-description">Here are some of the projects I've worked on recently.</p>
+                  
+                    <div class="projects-grid">
+                        <div class="project-card">
+                        <img src="/images/ecoscape1.jpeg" alt="EcoScape"/>
+            
+                <div class="project-content">
+                
+                <h3>EcoScape<br>(Backend/Fullstack)</h3>
+                <p>is a full-stack web application developed to promote sustainable tourism.
+                    Built with Java and Spring Boot, 
+                    it integrates features like user management, secure bookings, and email notifications.
+                </p>
+                <div class="tags">
+                    <span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>JWT</span>
+                    <span>JPA</span><span>Hibernate</span>
+                </div>
+                <a href="//github.com/ecoscapeteam/ecoscape.git"
+                 target="_blank">GitHub Repository of EcoScape</a>
+                 <a href="javascript:void(0)" class="more-details" onclick="openModal('ecoScapeModal')">More Details</a>
+                
+                </div>
+
+            </div>
+            <div class="project-card">
+                <img src="/images/plantswap.jpeg" alt="Plantswap"/> 
+            <div class="project-content">
+                <h3>Plantswap appliction<br>(Backend/Fullstack)</h3>
+                <p>This project is a RESTful API designed for managing plant exchanges and sales. Users can create accounts, list plants for trade or sale, and conduct secure transactions within the platform.
+                It is ensures that exchanges follow rules to maintain fairness and sustainability.
+                </p>
+                <div class="tags">
+                    <span>Java</span><span>Spring Boot</span><span>MongoDB</span><span>RESTful API</span>
+                </div>
+                <a href="//github.com/shamsalsaffar/Plantswap_appliction.git" target="_blank">
+                     GitHub Repository of Plantswap</a>
+                     <a href="javascript:void(0)" class="more-details" onclick="openModal('plantSwapModal')">More Details</a>
+                </div>
+                </div>
+               
+                <div class="project-card">
+                    <img src="/images/portfolio.jpeg" alt="Portfolio"/>
+                <div class="project-content">
+                    
+                    <h3>Portfolio (Frontend)</h3>
+                    <p>This is my personal portfolio showcasing my UI/UX design skills and frontend development expertise. 
+                        It highlights my work, projects, and experience in web design,
+                         demonstrating my ability to create responsive and visually appealing user interfaces.
+                    </p>
+                    <div class="tags">
+                        <span>Java script</span><span>HTML</span><span>CSS</span>
+                    </div>
+                    <a href="https://github.com/shamsalsaffar/SHAMS-Portfolio.git" target="_blank">GitHub Repository of Portfolio</a>
+                    <a href="javascript:void(0)" class="more-details" onclick="openModal('portfolioModal')">More Details</a>
+                    </div>
+        
+            </div>
+            <div class="project-card">
+                <img src="/images/cv.jpeg" alt="CV"/>
+            <div class="project-content">
+            
+                <h3>CV - Personal Website (Frontend)</h3>
+                <p>Built a one-page responsive CV website using HTML, CSS, and JavaScript. Includes sections like About Me,
+                     Experience, Skills, and Contact in a modern layout with scroll effects,
+                     animations, contact form.
+                </p>
+                <div class="tags">
+                    <span>Java script</span><span>HTML</span><span>CSS</span>
+                </div>
+                <a href="https://github.com/shamsalsaffar/SHAMS-Portfolio.git" target="_blank">GitHub Repository of Portfolio</a>
+                <a href="javascript:void(0)" class="more-details" onclick="openModal('cvModal')">More Details</a>
+                </div>
+
+                </div>    
+        </div>
+        <!--carousel section -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <a href="experience.html">
+                        <img src="/images/new_experince-removebg-preview (1).png" alt="Experience Image" />
+                    </a>
+                </div>
+              
+                <div class="carousel-item">
+                    <a href="education.html">
+                    <img src="/images/new education.png" alt="Education" />
+                </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="skills.html">
+                    <img src="/images/skillmain-removebg-preview.png" alt="Skills" />
+                </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="interests.html">
+                    <img src="/images/interests.png" alt="Interests"/>
+                </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="cv.html">
+                    <img src="/images/Cv  .png" alt="Interests"/>
+                </a>
+                </div>
+            </div>
+        </div>    
+                
+            </section>
+
+            <!-- Modal for EcoScape -->
+        <div id="ecoScapeModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('ecoScapeModal')">&times;</span>
+                <h2>EcoScape Project Details</h2>
+                <p><strong>My Role:</strong> I was responsible for developing the booking functionality and booking confirmation system in EcoScape. This included implementing backend logic for managing bookings, ensuring secure and efficient data handling with Spring Boot and PostgreSQL, and integrating email notifications to confirm and cancel bookings.</p>
+                <p><strong>API Documentation:</strong> <a href="https://documenter.getpostman.com/view/41126830/2sAYdmjn4Z" target="_blank">RESTful API Result</a></p>
+            </div>
+        </div>
+         <!-- Modal for plantswap -->
+         <div id="plantSwapModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('plantSwapModal')">&times;</span>
+                <h2>PlantSwap Project Details</h2>
+                <p><strong>My Role:</strong> I worked on database modeling, designing and implementing RESTful APIs, and developing the business logic for plant exchanges. 
+                    My contributions included handling data persistence, enforcing trade rules,
+                    and ensuring transactional integrity within the platform. </p>
+                <p><strong>API Documentation:</strong> <a href="//documenter.getpostman.com/view/41126830/2sB2cUA3Ct" target="_blank">RESTful API resulat</a></p>
+            </div>
+        </div>
+       
+         <!-- Modal for Portfolio-->
+         <div id="portfolioModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('portfolioModal')">&times;</span>
+                <h2>Portfolio Project Details</h2>
+                <p><strong>Design:</strong>:</strong>I designed the portfolio myself, following key UI/UX principles to ensure a clean, user-friendly experience.
+                    I utilized Figma for wireframing and prototyping before implementing the design.</p>
+                <p><strong>Figma Documentation:</strong> <a href="https://documenter.getpostman.com/view/41126830/2sAYdmjn4Z" target="_blank">Figma design</a></p>
+            </div>
+        </div>
+
+           
+         <!-- Modal for cv -->
+         <div id="cvModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('cvModal')">&times;</span>
+                <h2>CV - Personal Website Project Details</h2>
+                <p><strong>Design:</strong> I designed the portfolio myself, following key UI/UX principles to ensure a clean, user-friendly experience.
+                    I utilized Figma for wireframing and prototyping before implementing the design.</p>
+                <p><strong>Figma Documentation:</strong> <a href="https://documenter.getpostman.com/view/41126830/2sAYdmjn4Z" target="_blank">Figma design</a></p>
+            </div>
+        </div>
+  <footer>
+        <p>
+            &copy; 2025 shams alsaffar 
+        </p>
+    </footer>
+    <script src="script.js"></script> <!--link to javascript file-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration 1 second
+            once: true // Animation only occurs the first time when scrolling
+        });
+         // Carousel JavaScript for smooth sliding effect
+         let carousel = document.querySelector('.carousel');
+        let items = document.querySelectorAll('.carousel-item');
+        let index = 0;
+
+        function moveCarousel() {
+            index++;
+            if (index >= items.length) {
+                index = 0;
+            }
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        setInterval(moveCarousel, 2000); // Change image every 3 seconds
+    </script>
+</body>
