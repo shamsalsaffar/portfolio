@@ -282,7 +282,7 @@ main{
 }
 footer{
   position:relative;
-  bottom: o;
+  bottom: 0;
   padding: 10px;
   text-align: center;
   width: 100%;
@@ -291,6 +291,125 @@ footer{
   margin-bottom: 0;
   
 }
+/*---- ABOUT ME SECTION ----*/
+
+body.about-page {
+  text-align: center;
+  padding: 40px 40px;
+  width: 100;
+  max-width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  min-height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-animation: color-change-3x 4s linear infinite alternate both;
+    animation: color-change-3x 4s linear infinite alternate both;
+}
+.about-page main {
+  flex: 1;
+  margin-bottom: 0;
+}
+.about-page footer{
+  padding-top: 0;
+}
+
+.about-section{
+  text-align: center;
+  padding: 40px 40px;
+  width: 100;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  max-width: 100%;
+  min-height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-animation: color-change-3x 4s linear infinite alternate both;
+  animation: color-change-3x 4s linear infinite alternate both;
+  }
+.about-section h2{
+  color: #390626;
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: 'Great Vibes', cursive;
+  text-transform: uppercase;
+
+}
+.about-content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: stretch;
+  padding-top: 30px;
+  align-items:center;
+}
+.about-text{
+  flex:1;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-top: 0;
+  margin-top: 0;
+}
+.about-text p {
+  max-width: 90%; /* Förhindrar att texten blir för bred */
+  font-size: 1.75rem; /* Justera textstorlek om du vill */
+  line-height: 2; /* Gör texten lättare att läsa */
+  padding-top: 0;
+  margin-top: 0;
+  font-family: 'Akaya Telivigala', cursive;
+  color: #3f0c2c;
+}
+.about-image img{
+  border-radius: 12px;
+ max-width: 50%;
+width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 100px;
+
+}
+.about-image,
+.about-text {
+  flex: 1; /* Gör att både divarna får lika stor bredd */
+  height: 100%; /* Ser till att divarna fyller hela höjden */
+}
+@keyframes color-change-3x {
+  0% {
+    background-color: #d8d2d2; /* Ljusgrå */
+}
+25% {
+    background-color: #d1cfcf; /* Mediumgrå */
+}
+50% {
+    background-color: #d0c6c6; /* Mörkgrå */
+}
+
+100% {
+    background-color: #a9a9a9; /* Mediumgrå */
+}
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /*---- PROJECTS SECTION----*/
 .projects-page header {
@@ -636,6 +755,11 @@ a.more-details:hover {
         margin-bottom: 0;
         
     }
+  
+    .about-image img {
+      max-width: 60%;  /* Minska bildens storlek för att ge mer utrymme till texten */
+      margin-bottom: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -675,17 +799,6 @@ a.more-details:hover {
         margin-bottom: 0;
         
     }
-   /*  .projects-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: stretch;
-      gap: 90px;
-      max-width: 1000px;
-      
-      padding-top: 30px;
-    } */
-    
     .project-card {
       flex: 0 0 40%;
       flex:auto;
@@ -693,14 +806,30 @@ a.more-details:hover {
       height: auto;
 
     }
+    .about-content {
+      flex-direction: row;  /* Bild och text bredvid varandra */
+      gap: 30px;  /* Öka avståndet mellan bild och text */
+    }
+  
+    .about-image img {
+      max-width: 90%;  /* Gör bilden större på surfplattor */
+      margin-bottom: 0;  /* Ta bort margin-bottom för att passa bättre på surfplattor */
+    }
+  
+    .about-text {
+      max-width: 90%;  /* Begränsa textens bredd */
+    }
+    .about-text p {
+      max-width: 90%; /* Förhindrar att texten blir för bred */
+      font-size: 1rem; /* Justera textstorlek  */
+      line-height: 2; /* Gör texten lättare att läsa */
+      padding-top: 0;
+      margin-top: 0;
+      font-family: 'Akaya Telivigala', cursive;
+      color: #3f0c2c;
+    }
     
-   /*  .project-content {
-      padding: 20px;
-      flex: 1;                 /* stretchar innehållet */
-     /* display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    } */
+  
   }
 
 @media (max-width: 480px) {
@@ -753,6 +882,18 @@ a.more-details:hover {
   .projects-section {
     margin-bottom: 0;
     width: 100vw;
+  }
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image img {
+    max-width: 90%;  /* Bilden får ta upp mer plats på riktigt små skärmar */
+  }
+
+  .about-text {
+    font-size: 0.85rem;  /* Minska textstorleken ytterligare på väldigt små skärmar */
   }
 
   }
@@ -821,6 +962,19 @@ a.more-details:hover {
       width: 100vw;
       max-width: 100vw;
    
+    }
+    .about-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-image img {
+      max-width: 90%;  /* Bilden får ta upp mer plats på riktigt små skärmar */
+    }
+  
+    .about-text {
+      font-size: 0.85rem;  /* Minska textstorleken ytterligare på väldigt små skärmar */
+      text-align: center;
     }
 }
 @keyframes color-change-2x {

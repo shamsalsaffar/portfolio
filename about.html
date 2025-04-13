@@ -29,25 +29,79 @@
 
     <main>
         <section class="about-section">
+            <h2>Who is SHAMS ALSAFFAR</h2>
             <div class="about-content">
+                <div class="about-image">
+                    <img src="/images/qatar.jpeg" alt="Shams Alsaffar"/>
+                </div> 
             <div class="about-text">
-                <h1>Who is SHAMS ALSAFFAR</h1>
                 <p>Curious and dedicated developer currently studying and gaining experience in Java development.  
                     Possesses fundamental knowledge of Java, Spring, and databases, with experience working in agile environments.  
                     Familiar with planning and executing sprints, as well as using GitHub for project management.  
                     Passionate about problem-solving and creating user-friendly solutions.  
                     Eager to learn new languages and technologies without hesitation. </p>
-            </div>
-        
-            <div class="about-image">
-                <img src="/images/shamsbild.jpg" alt="Shams Alsaffar"/>
-            </div> 
+                </div>
            </div>           
-        </section>
-    </main>
+       
 
+     <!--carousel section -->
+     <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item">
+                <a href="experience.html">
+                    <img src="/images/new_experince-removebg-preview (1).png" alt="Experience Image" />
+                </a>
+            </div>
+          
+            <div class="carousel-item">
+                <a href="education.html">
+                <img src="/images/new education.png" alt="Education" />
+            </a>
+            </div>
+            <div class="carousel-item">
+                <a href="skills.html">
+                <img src="/images/skillmain-removebg-preview.png" alt="Skills" />
+            </a>
+            </div>
+            <div class="carousel-item">
+                <a href="interests.html">
+                <img src="/images/interests.png" alt="Interests"/>
+            </a>
+            </div>
+            <div class="carousel-item">
+                <a href="cv.html">
+                <img src="/images/Cv  .png" alt="Interests"/>
+            </a>
+            </div>
+        </div>
+     </div>
+    </section>
+       </main>
     <footer>
         <p>&copy; 2025 Shams Alsaffar</p>
     </footer>
+    <script src="script.js"></script> <!--link to javascript file-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration 1 second
+            once: true // Animation only occurs the first time when scrolling
+        });
+         // Carousel JavaScript for smooth sliding effect
+         let carousel = document.querySelector('.carousel');
+        let items = document.querySelectorAll('.carousel-item');
+        let index = 0;
+
+        function moveCarousel() {
+            index++;
+            if (index >= items.length) {
+                index = 0;
+            }
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        setInterval(moveCarousel, 2000); // Change image every 3 seconds
+    </script>
+
 </body>
 </html>

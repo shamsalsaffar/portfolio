@@ -26,7 +26,7 @@ window.onclick = function(event) {
     }
 };
 
-  const carousel = document.querySelector('.carousel');
+ /*  const carousel = document.querySelector('.carousel');
   const items = document.querySelectorAll('.carousel-item');
   let index = 0;
 
@@ -38,3 +38,4 @@ window.onclick = function(event) {
     carousel.style.transform = `translateX(-${index * 100}%)`;
   }, 3000); // كل 3 ثواني
 
+ */
