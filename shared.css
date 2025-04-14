@@ -1,11 +1,12 @@
 /* === IMPORTS === */
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
 
-/* === RESET & GLOBAL STYLES === */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    height: 100;
 }
 
 body {
@@ -218,8 +219,126 @@ footer {
     color: #fff;
 }
 
+/*--- END OF ABOUT SECTION--*/
 
+
+
+/*-- SKILLS SECTION --*/
+body.skills-page {
   
+   
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+   background-color: #390626;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    min-height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-animation: color-change-3x 4s linear infinite alternate both;
+      animation: color-change-3x 4s linear infinite alternate both;
+  }
+  .skills-page main {
+    flex: 1;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  footer {
+    margin-top: auto;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+}
+.skills-section{
+  
+    
+    width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+   left: 0;
+    transform: translateX(0);
+    transform: translateY(0);
+  background-color: #c6a8bb;
+  align-items: center;
+  justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-animation: color-change-3x 4s linear infinite alternate both;
+    animation: color-change-3x 4s linear infinite alternate both;
+    }
+  .skills-section h2{
+    color: #390626;
+      font-weight: bold;
+      font-size: 5rem;
+      text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+      font-family: 'Great Vibes', cursive;
+    text-transform: uppercase;
+    }
+    #description {
+        color: #390626;
+        font-weight: bold;
+        font-size: 2rem;
+        text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+        font-family: 'Akaya Telivigala', cursive;
+        margin-bottom: 2rem ;
+        margin-left: 2rem;
+
+    }
+    .skill-container {
+        text-align: center; /* Centrerar alla inline-block-element */
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+      }
+      
+      .skill-item {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #f3f3f3;
+        border-radius: 20px;
+        margin-left: 2rem;
+        margin-top: 2rem;
+        gap:10rem;
+      }
+      
+  .skill-item i {
+    transition: color 0.3s ease; /* Lägg till övergång för ikoner */
+   margin-left: 2px;
+  }
+  
+  .skill-item:hover {
+    transform: scale(1.05);
+    background-color: #ffecf2;
+    background: linear-gradient(90deg, rgba(255, 236, 242, 0.2) 25%, rgba(255, 236, 242, 0.4) 50%, rgba(255, 236, 242, 0.6) 75%); /* Ljusare bakgrund på hover */
+  transition: all 0.3s ease;
+  } 
+/* Bakgrundspaning från vänster till höger */
+@keyframes bg-pan-left {
+    0% {
+      background-position: -100%; /* Börjar utanför vänsterkanten */
+    }
+    100% {
+      background-position: 100%; /* Slutar utanför högerkanten */
+    }
+  }
+  .skill-item.bg-pan-left {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.3) 75%);
+    background-size: 200% 100%;
+    animation: bg-pan-left 8s infinite; /* Bakgrundspaning */
+  }
+
+ 
   @media (max-width: 768px) {
     header{
         padding-left: 0rem;
@@ -525,6 +644,27 @@ footer {
         transform: translate(-70px,-70px);
         white-space: pre-line;
     }
+    .skills-section h2{
+        color: #390626;
+          font-weight: bold;
+          font-size: 3rem;
+          text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+          font-family: 'Great Vibes', cursive;
+        text-transform: uppercase;
+        }
+        #description {
+            color: #390626;
+            font-weight: bold;
+            font-size: 1.3rem;
+            text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+            font-family: 'Akaya Telivigala', cursive;
+           
+    
+        }
+
+
+
+    
     /* Carousel Container */
 .carousel-container {
     width: 100%;
@@ -616,8 +756,10 @@ footer {
 .carousel-container {
     width: 100%;
     overflow: hidden;
-    margin: 0;
+    margin: 2rem;
+    padding: 2rem;
     gap:0;
+    border-radius: 12px;
     
   }
   
@@ -628,15 +770,16 @@ footer {
   }
   
   .carousel-item {
+    width: 100%;
     min-width: 300px;
-    max-width: 300px;
-    flex: 0 0 auto;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin-left: 0;
-    margin: 0;
-  }
+    max-width: 1200px;
+    margin: 0 auto;  /* Centrerar containern horisontellt */
+  overflow: hidden;
+  padding: 2rem;
+  gap: 0;
+  border-radius: 12px;
+  position: relative; /* Behövs för att kunna centrera carousel om den är absolut positionerad */
+}
   
   .carousel-item img {
     width: 50%;

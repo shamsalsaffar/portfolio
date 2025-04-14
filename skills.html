@@ -1,22 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio pf Shams Alsaffar, a Java Deveolper">
-    <title>Skills - Shams ALSAFFAR</title>
-    <link rel="stylesheet" href="style.css"> <!--Link to the css file -->
-    <link rel="images" type="images/png" href="favicon.png">
-    <!--för att visa ico brevid name -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of Shams Alsaffar, a Java Developer" />
+  <title>Skills - Shams ALSAFFAR</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
-<body>
-    <h1>Skills</h1>
-    <p>  <i class="fab fa-java"></i> Java,
-        <i class="fab fa-html5"></i>  HTML ,
-        <i class="fab fa-css3-alt"></i>  CSS,
-        <i class="fab fa-js"></i> JavaScript
-    </p>
-    </footer>
+
+<body class="skills-page">
+  <header>
+    <nav>
+      <div class="left-nav">
+        <ul>
+          <li><a href="#" class="menu-link" data-section="portfolio">SHAMS ALSAFFAR</a></li>
+        </ul>
+      </div>
+      <div class="right-nav">
+        <ul>
+          <li><a href="about.html" class="menu-link" data-section="about-me">About Me</a></li>
+          <li><a href="contact.html" class="menu-link" data-section="contact">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="skills-section">
+      <h2>Skills</h2>
+      <div id="description">
+        <p>Click on a skill to see the description.</p>
+      </div>
+
+      <!-- Skills list -->
+      <div class="skills-container">
+        <span class="skill-item bg-pan-left" data-skill="Java"><i class="fab fa-java"></i> Java</span>
+        <span class="skill-item bg-pan-left" data-skill="HTML"><i class="fab fa-html5"></i> HTML</span>
+        <span class="skill-item bg-pan-left" data-skill="CSS"><i class="fab fa-css3-alt"></i> CSS</span>
+        <span class="skill-item bg-pan-left" data-skill="JavaScript"><i class="fab fa-js"></i> JavaScript</span>
+        <span class="skill-item bg-pan-left" data-skill="Postgres"><i class="fas fa-database"></i> Postgres</span>
+        <span class="skill-item bg-pan-left" data-skill="MongoDB"><i class="fas fa-database"></i> MongoDB</span>
+        <span class="skill-item bg-pan-left" data-skill="REST API"><i class="fas fa-plug"></i> REST API</span>
+        <span class="skill-item bg-pan-left" data-skill="GitHub"><i class="fab fa-github"></i> GitHub</span>
+        <span class="skill-item bg-pan-left" data-skill="Maven"><i class="fas fa-cogs"></i> Maven</span>
+        <span class="skill-item bg-pan-left" data-skill="Node.js"><i class="fab fa-node"></i> Node.js</span>
+        <span class="skill-item bg-pan-left" data-skill="Docker"><i class="fab fa-docker"></i> Docker</span>
+        <span class="skill-item bg-pan-left" data-skill="React"><i class="fab fa-react"></i> React</span>
+      </div>
+   
+  
+    <!-- Carousel Section -->
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item"><a href="experience.html"><img src="/images/new_experince-removebg-preview (1).png" alt="Experience Image" /></a></div>
+        <div class="carousel-item"><a href="projects.html"><img src="/images/Projects.png" alt="Projects Image" /></a></div>
+        <div class="carousel-item"><a href="education.html"><img src="/images/new education.png" alt="Education" /></a></div>
+        <div class="carousel-item"><a href="skills.html"><img src="/images/skillmain-removebg-preview.png" alt="Skills" /></a></div>
+        <div class="carousel-item"><a href="interests.html"><img src="/images/interests.png" alt="Interests" /></a></div>
+        <div class="carousel-item"><a href="cv.html"><img src="/images/Cv  .png" alt="CV" /></a></div>
+      </div>
+    </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Shams Alsaffar</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+   const carousel = document.querySelector('.carousel');
+        const items = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+      
+        // انسخ أول عنصر وأضفه للنهاية (لإنشاء حركة دائرية)
+        const firstClone = items[0].cloneNode(true);
+        carousel.appendChild(firstClone);
+      
+        function getVisibleItemsCount() {
+          const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+          const itemWidth = items[0].offsetWidth;
+          return Math.floor(containerWidth / itemWidth);
+        }
+      
+        function moveCarousel() {
+          const itemWidth = items[0].offsetWidth;
+          const visibleCount = getVisibleItemsCount();
+          currentIndex++;
+      
+          carousel.style.transition = "transform 0.5s ease-in-out";
+          carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+      
+          const totalItems = document.querySelectorAll('.carousel-item').length;
+          // إذا وصلنا لنهاية الكاروسيل (آخر العناصر الظاهرة)
+          if (currentIndex >= totalItems - visibleCount) {
+            setTimeout(() => {
+              carousel.style.transition = "none";
+              carousel.style.transform = "translateX(0px)";
+              currentIndex = 0;
+            }, 500);
+          }
+        }
+      
+        setInterval(moveCarousel, 1500); //  تعديله
+      </script>
 </body>
+</html>

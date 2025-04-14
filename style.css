@@ -372,13 +372,15 @@ body.about-page {
 }
 .about-image img{
   border-radius: 12px;
- max-width: 50%;
-width: 100%;
+  max-width: 50%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   margin-bottom: 100px;
+ -webkit-animation: kenburns-bottom-left 5s ease-out both;
+  animation: kenburns-bottom-left 5s ease-out both;
+  }
 
-}
 .about-image,
 .about-text {
   flex: 1; /* Gör att både divarna får lika stor bredd */
@@ -399,15 +401,20 @@ width: 100%;
     background-color: #a9a9a9; /* Mediumgrå */
 }
 }
-
-
-
-
-
-
-
-
-
+@keyframes kenburns-bottom-left {
+  0% {
+    -webkit-transform: scale(1) translate(0, 0);
+            transform: scale(1) translate(0, 0);
+    -webkit-transform-origin: 16% 84%;
+            transform-origin: 16% 84%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translate(-20px, 15px);
+            transform: scale(1.25) translate(-20px, 15px);
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+  }
+}
 
 
 
@@ -588,7 +595,7 @@ a.more-details:hover {
   cursor: pointer; /* mouse design*/
 }
 
-@keyframes text-shadow-drop-bottom {
+@keyframes text-shadow-drop-bottom { /*EXTRA  EFFET SOM LEDER ATT TEXT SER UT SOM WAVE */
   0% {
     text-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
     transform: translateY(-10px);
@@ -671,8 +678,9 @@ a.more-details:hover {
   }
  
 }
+/*-- END OF PROJECTS SECTION--*/
 
-/* Carousel Container */
+/* --Carousel Container-- */
 .carousel-container {
   width: 100%;
   overflow: hidden;
@@ -711,7 +719,7 @@ a.more-details:hover {
   margin-bottom: 50px;
 }
 
-
+/*-- END OF CARUSELL*/
 
 
 /* media Queries for responsivness*/
