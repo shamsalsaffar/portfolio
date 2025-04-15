@@ -375,10 +375,12 @@ body.about-page {
   max-width: 50%;
   width: 100%;
   height: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   object-fit: cover;
   margin-bottom: 100px;
- -webkit-animation: kenburns-bottom-left 5s ease-out both;
-  animation: kenburns-bottom-left 5s ease-out both;
+  -webkit-animation: kenburns-top-right 5s ease-out both;
+	        animation: kenburns-top-right 5s ease-out both;
   }
 
 .about-image,
@@ -401,18 +403,18 @@ body.about-page {
     background-color: #a9a9a9; /* Mediumgrå */
 }
 }
-@keyframes kenburns-bottom-left {
+@keyframes kenburns-top-right {
   0% {
     -webkit-transform: scale(1) translate(0, 0);
             transform: scale(1) translate(0, 0);
-    -webkit-transform-origin: 16% 84%;
-            transform-origin: 16% 84%;
+    -webkit-transform-origin: 84% 16%;
+            transform-origin: 84% 16%;
   }
   100% {
-    -webkit-transform: scale(1.25) translate(-20px, 15px);
-            transform: scale(1.25) translate(-20px, 15px);
-    -webkit-transform-origin: left bottom;
-            transform-origin: left bottom;
+    -webkit-transform: scale(1.25) translate(20px, -15px);
+            transform: scale(1.25) translate(20px, -15px);
+    -webkit-transform-origin: right top;
+            transform-origin: right top;
   }
 }
 
@@ -903,6 +905,44 @@ a.more-details:hover {
   .about-text {
     font-size: 0.85rem;  /* Minska textstorleken ytterligare på väldigt små skärmar */
   }
+  /* --Carousel Container-- */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 50px; /* Add some space between sections */
+  margin: 0;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 5px
+}
+
+.carousel-item {
+  min-width: 300px;
+  max-width: 300px;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-left: 0;
+  margin: 5px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 5px;
+  padding: 0;
+  border-radius: 16px;
+}
+
+/* Style for Timeline and other sections */
+.timeline {
+  margin-bottom: 50px;
+}
 
   }
   @media (max-width: 390px) {
@@ -984,6 +1024,44 @@ a.more-details:hover {
       font-size: 0.85rem;  /* Minska textstorleken ytterligare på väldigt små skärmar */
       text-align: center;
     }
+    /* --Carousel Container-- */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 50px; /* Add some space between sections */
+  margin: 0;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 5px
+}
+
+.carousel-item {
+  min-width: 300px;
+  max-width: 300px;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-left: 0;
+  margin: 5px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 5px;
+  padding: 0;
+  border-radius: 16px;
+}
+
+/* Style for Timeline and other sections */
+.timeline {
+  margin-bottom: 50px;
+}
 }
 @keyframes color-change-2x {
   0% {

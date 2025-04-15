@@ -66,3 +66,31 @@ const skillItems = document.querySelectorAll('.skill-item');
     });
   });
 
+  // Smoth scroll 
+// Smooth scroll till contact section
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+//validering och skicka kontaktformulär(utan backend)
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+contactForm.addEventListener('submit', function(e) {
+  e.preventDefault(); // يمنع التحديث التلقائي للصفح
+
+  // Simulera skickande // بعد 1.5 ثانية، نعرض رسالة النجاح
+  formStatus.textContent = "Sending...";
+  setTimeout(() => {
+    formStatus.textContent = "Thank you! Your message was sent.";
+    contactForm.reset(); // بعد 1.5 ثانية، نعرض رسالة النجاح
+  }, 1500);
+});

@@ -88,25 +88,40 @@
     <script src="script.js"></script> <!--link to javascript file-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000, // Animation duration 1 second
-            once: true // Animation only occurs the first time when scrolling
-        });
-         // Carousel JavaScript for smooth sliding effect
-         let carousel = document.querySelector('.carousel');
-        let items = document.querySelectorAll('.carousel-item');
-        let index = 0;
-
-        function moveCarousel() {
-            index++;
-            if (index >= items.length) {
-                index = 0;
-            }
-            carousel.style.transform = `translateX(-${index * 100}%)`;
-        }
-
-        setInterval(moveCarousel, 2000); // Change image every 3 seconds
-    </script>
-
+        const carousel = document.querySelector('.carousel');
+             const items = document.querySelectorAll('.carousel-item');
+             let currentIndex = 0;
+           
+             // انسخ أول عنصر وأضفه للنهاية (لإنشاء حركة دائرية)
+             const firstClone = items[0].cloneNode(true);
+             carousel.appendChild(firstClone);
+           
+             function getVisibleItemsCount() {
+               const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+               const itemWidth = items[0].offsetWidth;
+               return Math.floor(containerWidth / itemWidth);
+             }
+           
+             function moveCarousel() {
+               const itemWidth = items[0].offsetWidth;
+               const visibleCount = getVisibleItemsCount();
+               currentIndex++;
+           
+               carousel.style.transition = "transform 0.5s ease-in-out";
+               carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+           
+               const totalItems = document.querySelectorAll('.carousel-item').length;
+               // إذا وصلنا لنهاية الكاروسيل (آخر العناصر الظاهرة)
+               if (currentIndex >= totalItems - visibleCount) {
+                 setTimeout(() => {
+                   carousel.style.transition = "none";
+                   carousel.style.transform = "translateX(0px)";
+                   currentIndex = 0;
+                 }, 500);
+               }
+             }
+           
+             setInterval(moveCarousel, 1500); //  تعديله
+           </script>
 </body>
 </html>

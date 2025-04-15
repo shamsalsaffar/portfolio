@@ -1,7 +1,7 @@
 /* === IMPORTS === */
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -337,6 +337,219 @@ body.skills-page {
     background-size: 200% 100%;
     animation: bg-pan-left 8s infinite; /* Bakgrundspaning */
   }
+  /*== END OF SKILLS SECTION ==*/
+
+
+                    /*==== CONTACT SECTION===*/
+  /* توسيط العنوان */
+  body.contact-page {
+    display: flex ;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 40px;
+    width: 100;
+    max-width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    min-height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-animation: color-change-3x 4s linear infinite alternate both;
+      animation: color-change-3x 4s linear infinite alternate both;
+  }
+  .contact-page main {
+    flex: 1;
+    margin: 0;
+    margin-bottom: 0;
+   /*  min-height: 100vh; /**/ 
+  }
+  .contact-page footer{
+    padding-top: 1.75rem;
+    padding-bottom: 2rem;
+    margin: bottom 0;;
+    margin-top: 0;
+  }
+  
+  #contact{
+    text-align: center;
+    padding: 40px 40px;
+  
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+
+   transform: translateX(0);
+   transform: translateY(0);
+   left:0;
+   bottom: 0;
+   max-width: 100%;
+    min-height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-animation: color-change-3x 4s linear infinite alternate both;
+    animation: color-change-3x 6s linear infinite alternate both;
+    animation: glowing-background 6s linear infinite alternate;
+  border-radius: 10px;
+  padding: 20px;
+}
+ 
+.section-title {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #0a0101;
+    position: relative;
+    margin: 18px auto 30px;
+    padding-top: 1rem;
+    font-family: 'Poppins', sans-serif;
+   
+}
+  
+  /* حاوية المحتوى */
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+  
+  /* صورة */
+  .contact-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  .contact-image img {
+    width: 100%;
+    height: 500;
+    border-radius: 50%;
+    
+  }
+  
+  /* فورم والنص */
+  .contact-content {
+    flex: 1;
+    min-width: 300px;
+  }
+  .contact-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #444;
+    font-family: 'Cinzel', serif;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Cinzel', serif;
+    color:#1e1e17 ;
+  }
+  input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  button {
+    background-color: white;      /* خلفية بيضاء */
+    color: red;                   /* نص أحمر */
+    border: 1px solid red;        /* حد أحمر */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Cinzel', serif; 
+    margin-top: 2rem;
+  }
+  
+  button:hover {
+    background-color: red;        /* خلفية حمراء عند التحويم */
+    color: white;                 /* نص أبيض عند التحويم */
+  }
+  /* روابط التواصل */
+  .social-links {
+    margin-top: 20px;
+  }
+  .social-links i {
+    margin-right: 8px;
+    color: #2f2f20;
+  }
+  .social-links a {
+    text-decoration: none;
+    color: #1e1e17;
+    font-family: 'Cinzel', serif;
+  }
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+
+  /* h2 effekt */
+  .text-shadow-drop-bottom {
+    display: inline-block;
+    position: relative;
+    animation: shadow-drop 5s ease infinite;
+    animation-delay: calc(0.1s * var(--i)); /* Fördröjd animation beroende på varje bokstav */
+  }
+  
+  @keyframes shadow-drop {
+    0% {
+      text-shadow: none;
+      transform: translateY(-10px);
+    }
+    100% {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      transform: translateY(0);
+    }
+  }
+  
+/* bakground effekt */
+@keyframes color-change-3x {
+    0% {
+        background-color: #fff; /* Mycket ljus vit */
+        box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 30px #f1e6bc, 0 0 50px #d1c7a0, 0 0 75px #f5ebc5;
+      }
+      50% {
+        background-color: #f5f1e2; /* Ljusgul */
+        box-shadow: 0 0 10px #fff, 0 0 20px #ebe3c5, 0 0 40px #dad2b2, 0 0 60px #ebe3c5, 0 0 100px #dfd6b4;
+      }
+      100% {
+        background-color: #fff; /* Mycket ljus vit */
+        box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 30px #eee7cb, 0 0 50px #f4edd1, 0 0 75px #eeead9;
+      }
+    }
+
+
+
+
+
+
+
+  @media (max-width: 1440px) {
+
+  }
+  .contact-image img {
+    width: 450px;
+    height: 600;
+    border-radius: 50%;
+    gap:0
+    
+  }
+  #contact{
+    height: 100vh;
+  }
+  
+
+
+
+
 
  
   @media (max-width: 768px) {
@@ -427,6 +640,58 @@ body.skills-page {
         transform: translate(-125px,45px);
         white-space: pre-line;
     }
+    #contact{
+     height: 100vh; /* för att contact-section blir på hela sidan */
+       
+        }
+       
+        .contact-page{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            margin: 0;
+        }
+        .contact-page main {
+            flex:1;
+            margin: 0;
+        }
+       
+         /* فورم والنص */
+      .contact-content {
+        flex: 1;
+        min-width: 100px;
+        width: 100%;
+      }
+      .contact-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #444;
+        margin-top: 1rem;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+       
+      }
+    
+      /* صورة */
+      .contact-image {
+        flex: 1;
+        min-width: 440px;
+      }
+      .contact-image img {
+        width: 93%;
+        height: 450;
+        border-radius: 50%;
+        margin-top: 1rem;
+        
+      }
+      
+       
+ 
+    
+
     
 }
 @media (max-width: 480px) {
@@ -536,13 +801,112 @@ body.skills-page {
         transform: translate(-70px,-70px);
         white-space: pre-line;
     }
+    #contact{
+        height: 100%;
+        margin: 0;
+        right: 0;
+        transform: translateX(0);
+        transform: translateY(0);
+    }
+    .contact-page{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 0;
+    }
+    .contact-page main {
+        flex:1;
+        margin: 0;
+    }
+   
+    .section-title {
+        font-size: 22px;
+    }
+     /* فورم والنص */
+  .contact-content {
+    flex: 1;
+    min-width: 100px;
+    width: 100%;
+  }
+  .contact-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+  }
+  input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+   ;
+  }
+  /* صورة */
+  .contact-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  .contact-image img {
+    width: 90%;
+    height: 450;
+    border-radius: 50%;
+    
+  }
+   
+    /* Carousel Container */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    gap:0;
+    
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 2px;
+  }
+  
+  .carousel-item {
+    min-width: calc(5% - 2px);
+    max-width: 300px;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-left: 0;
+    margin: 0;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    margin: 0;
+    min-height: auto;
+    border-radius: 16px;
+  }
+  
+  /* Style for Timeline and other sections */
+  .timeline {
+    margin-bottom: 2px;
+  }
     
 }
+    
+
   
   @media (max-width: 390px) {
     /* Header adjustments */
     header {
-        font-size: 4px; /* Reduce font size even more for small screens */
+        font-size: 2px; /* Reduce font size even more for small screens */
         padding: 8px;
         flex-wrap: wrap;
         text-align: center; /* Center header content */
@@ -560,6 +924,7 @@ body.skills-page {
         width: 100%;
         display: flex;
         justify-content: center;
+        
     }
 
     .left-nav ul,
@@ -569,10 +934,11 @@ body.skills-page {
         gap: 0.8rem; /* Reduced space between nav items */
         padding: 0;
         margin: 0;
+        font-size: 8px;
     }
 
-    .menu-link {
-        font-size: 0.9rem; /* Even smaller font for better fit */
+    .menu-link a {
+        font-size: 8px; /* Even smaller font for better fit */
         padding: 0;
         margin: 0;
     }
@@ -661,6 +1027,63 @@ body.skills-page {
            
     
         }
+    #contact{
+        height: 100%;
+        margin: 0;
+        right: 0;
+        transform: translateX(0);
+        transform: translateY(0);
+    }
+    .contact-page{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 0;
+    }
+    .contact-page main {
+        flex:1;
+        margin: 0;
+    }
+   
+     /* فورم والنص */
+  .contact-content {
+    flex: 1;
+    min-width: 100px;
+    width: 100%;
+  }
+  .contact-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+  }
+  input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+   ;
+  }
+  /* صورة */
+  .contact-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  .contact-image img {
+    width: 90%;
+    height: 450;
+    border-radius: 50%;
+    
+  }
+  
+  .section-title {
+    font-size: 22px;
+}
 
 
 
