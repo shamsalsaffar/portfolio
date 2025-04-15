@@ -5,26 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal portfolio of Shams Alsaffar, a Java Developer">
     <title>Interests - Shams ALSAFFAR</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to the css file -->
+    <link rel="stylesheet" href="interest.css"> <!-- Link to the css file -->
     <link rel="icon" href="favicon.png" type="image/png"> <!-- For favicon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <header>
-        <h1>Interests</h1>
-    </header>
+<body class="interest-page">
+  
+        <header>
+       
+            <nav>
+                <div class="left-nav">
+                 <ul>
+                     <li><a href="#" class="menu-link" data-section="portfolio">SHAMS ALSAFFAR</a></li>   
+                 </ul>
+                </div>
+                <div class="right-nav">
+                 <ul>
+                     <li><a href="about.html" class="menu-link1" data-section="about-me">About Me</a></li>
+                     <li><a href="contact.html" class="menu-link2" data-section="contact">Contact Me</a></li>   
+                 </ul>
+             </div>
+             </nav>
+           
+            </header>
+    
 
     <main>
-        <section>
-            <p>I am interested in solving technical challenges through programming and enjoy collaborating in teams to build functional solutions.
-            I also like working with people, where I can help and provide support in various situations. 
-            In my free time, I enjoy spending time with my husband and our two children, and I cherish family moments together. 
+        <section id="interest">
+          <h2 class="interest-tittle">
+            <span class="tracking-in-expand-fwd" style="animation-delay: 0.2s;">I</span>
+            <span class="tracking-in-expand-fwd" style="animation-delay: 0.4s;">n</span>
+            <span class="tracking-in-expand-fwd" style="animation-delay: 0.5s;">t</span>
+            <span class="tracking-in-expand-fwd" style="animation-delay: 0.8s;">e</span>
+            <span class="tracking-in-expand-fwd" style="animation-delay: 0.10s;">r</span>
+            <span class="tracking-in-expand-fwd" style="animation-delay: 1.2s;">e</span>
+            <span class="tracking-in-expand-fwd" style="animation-delay: 1.4s;">s</span>
+            <span class="tracking-in-expand-fwd" style="animation-delay: 1.6s;">t</span>
+            <span class="tracking-in-expand-fwd" style="animation-delay: 1.8s;">s</span>
+          </h2>
+          
+        <div class=""interest-container>
+
+          <div class="interest-text">
+            <p>
+                I am passionate about solving technical challenges through programming and thrive 
+                in team environments where we can collaborate to create functional solutions. 
+                I enjoy working with people and providing support in various situations.
+                 Additionally, I believe in the importance of balancing work and personal life.
+                  In my free time, I cherish the valuable moments spent with my family. My little 
+                  family gives me a sense of warmth and security, which I truly value. It is these
+                 family moments that inspire me to give my best both personally and professionally.
             </p>
+        </div>
+
+          <div class="interest-image">
+           <img class="slide-image" src="/images/41B02759-3F50-4321-8919-9CE2E27655B6_1_105_c.jpeg" alt="family image">
+          <img class="slide-image" src="/images/E562C5B2-5321-4215-9FFC-93D28623F6DF_1_105_c.jpeg" alt="family image">
+            <img class="slide-image" src="/images/barnroma.jpeg" alt="family image">
+            <img class="slide-image" src="/images/9EFF86E0-4BF2-4FB5-8464-BA49EBB580A1.jpeg" alt="family image">
+        
+        </div>
+      
+    
         </section>
+       <!-- Carousel Section -->
+       <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-item"><a href="experience.html"><img src="/images/new_experince-removebg-preview (1).png" alt="Experience Image" /></a></div>
+          <div class="carousel-item"><a href="projects.html"><img src="/images/Projects.png" alt="Projects Image" /></a></div>
+          <div class="carousel-item"><a href="education.html"><img src="/images/new education.png" alt="Education" /></a></div>
+          <div class="carousel-item"><a href="skills.html"><img src="/images/skillmain-removebg-preview.png" alt="Skills" /></a></div>
+          <div class="carousel-item"><a href="interests.html"><img src="/images/interests.png" alt="Interests" /></a></div>
+          <div class="carousel-item"><a href="cv.html"><img src="/images/Cv  .png" alt="CV" /></a></div>
+        </div>
+      </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Shams Alsaffar</p>
     </footer>
+    <script src="script.js"></script> <!--link to javascript file-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const carousel = document.querySelector('.carousel');
+             const items = document.querySelectorAll('.carousel-item');
+             let currentIndex = 0;
+           
+             // انسخ أول عنصر وأضفه للنهاية (لإنشاء حركة دائرية)
+             const firstClone = items[0].cloneNode(true);
+             carousel.appendChild(firstClone);
+           
+             function getVisibleItemsCount() {
+               const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+               const itemWidth = items[0].offsetWidth;
+               return Math.floor(containerWidth / itemWidth);
+             }
+           
+             function moveCarousel() {
+               const itemWidth = items[0].offsetWidth;
+               const visibleCount = getVisibleItemsCount();
+               currentIndex++;
+           
+               carousel.style.transition = "transform 0.5s ease-in-out";
+               carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+           
+               const totalItems = document.querySelectorAll('.carousel-item').length;
+               // إذا وصلنا لنهاية الكاروسيل (آخر العناصر الظاهرة)
+               if (currentIndex >= totalItems - visibleCount) {
+                 setTimeout(() => {
+                   carousel.style.transition = "none";
+                   carousel.style.transform = "translateX(0px)";
+                   currentIndex = 0;
+                 }, 500);
+               }
+             }
+           
+             setInterval(moveCarousel, 1500); //  تعديله
+           </script>
+           
+          
 </body>
 </html>
+

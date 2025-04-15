@@ -94,3 +94,7 @@ contactForm.addEventListener('submit', function(e) {
     contactForm.reset(); // بعد 1.5 ثانية، نعرض رسالة النجاح
   }, 1500);
 });
+
+
+
+  

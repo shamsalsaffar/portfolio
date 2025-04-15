@@ -1,0 +1,563 @@
+/* === IMPORTS === */
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 25%, rgba(192, 192, 192, 0.5) 50%, rgba(59, 77, 111, 0.7) 75%);
+    background-size: 100% 100%;
+    position: relative;
+    animation: glowEffect 5s ease-in-out infinite;
+    overflow: auto;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 10%, rgba(255, 255, 255, 0.3) 40%, transparent 60%);
+    animation: glowEffect 5s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* === HEADER & NAVIGATION === */
+header {
+    background-color: #454343;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.left-nav ul {
+    padding-left: 3rem;
+}
+
+.right-nav ul {
+    padding-right: 0.5rem;
+   margin-right: 0;
+    justify-content: flex-end;
+}
+
+nav li {
+    margin: 1rem 0;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+.menu-link1{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: font-size 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+.menu-link2 {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: font-size 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+}
+.right-nav ul li a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  margin-right: 1rem;
+  justify-content: flex-end;
+  
+  align-items: center;
+}
+
+.left-nav ul li a {
+    font-size: 5rem;
+    font-weight: 700;
+    justify-content: center;
+    margin-right: 0;
+}
+
+.left-nav ul li a:hover,
+.right-nav ul li a:hover {
+    font-size: 2.5rem;
+    color: #e9eeb2;
+}
+/*=== ENF OF MAIN SIDE ==*/
+
+/*===== INTERESTS SECTION ========*/
+body.interest-page {
+  animation: gradient-fade 10s ease infinite;
+  background-size: 400% 400%;
+  min-height: 100vh;
+}
+@keyframes gradient-fade {
+  0% {
+    background: linear-gradient(120deg, #f4f0f1, #f1e0e7);
+  }
+  50% {
+    background: linear-gradient(120deg, #f8edf2, #f9f2f4);
+  }
+  100% {
+    background: linear-gradient(120deg, #f5d7e1, #ffe6f0);
+  }
+}
+
+body.interest-page header {
+  background-color: #5d5c5a; /* Bakgrundsfärg för headern */
+  color: white; /* Textfärg */
+  padding: 20px 0; /* Lite utrymme runt om */
+}
+
+#interests {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #fffdfc;
+}
+
+.interest-tittle {
+  font-size: 50px;
+  text-align: center;
+  color: #0a0101;
+  margin-top: 2rem;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0;
+  animation: intermittent-fade 5s ease-in-out infinite;
+  animation-iteration-count: forword; /* جعل التأثير يتكرر إلى الأبد */
+  animation-delay: 9s; 
+
+}
+@keyframes intermittent-fade {
+  0% { opacity: 0; transform: translateY(20px); }
+  50% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+.interest-container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.interest-text {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #3f0c2c;
+  font-family: 'Akaya Telivigala', cursive;
+  line-height: 2;
+ justify-content: center;
+ margin-left: 2rem;
+ margin-right: 2rem;
+}
+
+.interest-image {
+  display: flex;
+  flex-direction: row;      /* خليهم جنب بعض */
+  justify-content: center;  /* توسيط الصور */
+  align-items: center;
+  gap: 20px;                 /* مسافة بين الصور */
+  flex-wrap: nowrap;        /* لا يسمح بنزول الصور تحت */
+  overflow-x: auto;         /* تمرير أفقي لو الصور كثيرة */
+  padding: 20px 0;
+}
+
+.slide-image {
+  width: 340px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  flex-shrink: 0;           /* يمنع التصغير لما الشاشة تصغر */
+  transition: transform 0.3s ease;
+  animation: bounceIn 1s ease-in-out;
+}
+.slide-image:hover {
+  transform: scale(1.1);
+  filter: brightness(110%) contrast(105%);
+  animation: pulse 2s infinite;
+}
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+  /* ====Carousel Container=== */
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 50px; /* Add some space between sections */
+    margin: 0;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 5px
+  }
+  
+  .carousel-item {
+    min-width: 300px;
+    max-width: 300px;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-left: 0;
+    margin: 5px;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 5px;
+    padding: 0;
+    border-radius: 16px;
+  }
+  
+  /* Style for Timeline and other sections */
+  .timeline {
+    margin-bottom: 50px;
+  }
+/*===END OF CAROSELL====*/
+
+
+/* media Queries for responsivness*/
+@media (max-width: 1440px) {
+    footer{
+        position:relative;
+        bottom: o;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        background-color: rgb(1, 1, 1);
+        color: #fff;
+        margin-bottom: 0;
+        margin-top: 1rem;
+        
+    }
+  
+   
+}
+
+@media (max-width: 768px) {
+    .right-nav ul {
+      padding-right: 0.5rem;
+     margin-right: 0;
+     margin-left: 3rem;
+      justify-content: flex-end;
+  }
+ 
+  .right-nav ul li a {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    margin-right: 0.5rem;
+    justify-content: flex-end;
+    
+    align-items: center;
+  }
+  
+  .left-nav ul li a {
+      font-size: 34px;
+      font-weight: 700;
+      justify-content: center;
+      margin-right: 0;
+  }
+  
+  .left-nav ul li a:hover,
+  .right-nav ul li a:hover {
+      font-size: 2.5rem;
+      color: #e9eeb2;
+  }
+   
+    footer{
+        position:relative;
+        bottom: o;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        background-color: rgb(1, 1, 1);
+        color: #fff;
+        margin-bottom: 0;
+        margin-top: 1rem;
+        
+    }
+    .slide-image {
+      width: 173px;
+      height: 170px;
+    }
+   
+  
+  }
+
+@media (max-width: 480px) {
+  /* Header adjustments */
+  .right-nav ul {
+    padding-right: 0;
+   margin: 0;
+    justify-content: right;
+}
+
+.right-nav ul li a {
+  font-size: 10px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  margin-right: 0.5rem;
+  justify-content: center;
+  
+  align-items: center;
+}
+
+.left-nav ul li a {
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: center;
+    margin-right: 0;
+}
+
+.left-nav ul li a:hover,
+.right-nav ul li a:hover {
+    font-size: 2.5rem;
+    color: #e9eeb2;
+}
+ 
+  footer{
+      position:relative;
+      bottom: 0;
+      padding: 10px;
+      text-align: center;
+      width: 100%;
+      background-color: rgb(1, 1, 1);
+      color: #fff;
+      margin-bottom: 0;
+      margin-top: 1rem;
+      
+  }
+  /* --Carousel Container-- */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 50px; /* Add some space between sections */
+  margin: 0;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 5px
+}
+
+.carousel-item {
+  min-width: 300px;
+  max-width: 300px;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-left: 0;
+  margin: 5px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 5px;
+  padding: 0;
+  border-radius: 16px;
+}
+
+/* Style for Timeline and other sections */
+.timeline {
+  margin-bottom: 50px;
+}
+
+  }
+  @media (max-width: 390px) {
+    /* Header adjustments */
+    .right-nav ul {
+      padding-right: 0;
+     margin: 0;
+      justify-content: right;
+  }
+ 
+  .right-nav ul li a {
+    font-size: 10px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    margin-right: 0.5rem;
+    justify-content: center;
+    
+    align-items: center;
+  }
+  
+  .left-nav ul li a {
+      font-size: 20px;
+      font-weight: 700;
+      justify-content: center;
+      margin-right: 0;
+  }
+  
+  .left-nav ul li a:hover,
+  .right-nav ul li a:hover {
+      font-size: 2.5rem;
+      color: #e9eeb2;
+  }
+   
+    footer{
+        position:relative;
+        bottom: 0;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        background-color: rgb(1, 1, 1);
+        color: #fff;
+        margin-bottom: 0;
+        margin-top: 1rem;
+        
+    }
+    .slide-image {
+      width: 80px;
+      height: 95px;
+    }
+   
+    /* --Carousel Container-- */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 50px; /* Add some space between sections */
+  margin: 0;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 5px
+}
+
+.carousel-item {
+  min-width: 300px;
+  max-width: 300px;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-left: 0;
+  margin: 5px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 5px;
+  padding: 0;
+  border-radius: 16px;
+}
+
+/* Style for Timeline and other sections */
+.timeline {
+  margin-bottom: 50px;
+}
+}
+@keyframes color-change-2x {
+  0% {
+    background: linear-gradient(45deg, #3b4d6f, #c0c0c0); /* Mörkblå till silver */
+}
+50% {
+    background: linear-gradient(45deg, #4f5d77, #b0b0b0); /* En mer subtil övergång */
+}
+100% {
+    background: linear-gradient(45deg, #c0c0c0, #3b4d6f); /* Silver till mörkblå */
+}
+}
+@keyframes glowEffect {
+  0% {
+      background-position: -100% -100%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: -100% -100%;
+  }
+}
