@@ -3,31 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio pf Shams Alsaffar, a Java Deveolper">
+    <meta name="description" content="Personal portfolio of Shams Alsaffar, a Java Developer">
     <title>Experience - Shams ALSAFFAR</title>
-    <link rel="stylesheet" href="style.css"> <!--Link to the css file -->
-    <link rel="images" type="images/png" href="favicon.png">
-    <!--för att visa ico brevid name -->
+    <link rel="stylesheet" href="interest.css"> <!-- Link to the CSS file -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- För att visa favicon bredvid namn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 </head>
-<body>
-    <h1>Experience</h1>
-    <p>
-        <ul>
-            <li>
-                <strong class="exp-title">Sales Manager Assistant</strong>
-                <div class="exp-desc">2022 - ongoing. Here this is the description.</div>
-            </li>
-            <li>
-                <strong class="exp-title">NF responsible</strong>
-                <div class="exp-desc">2019 - 2022. Here this is the description.</div>
-            </li>
-        </ul>
-    </p>
+<body class="experience-page">
+    <header>
+        <nav>
+            <div class="left-nav">
+                <ul>
+                    <li><a href="#" class="menu-link" data-section="portfolio">SHAMS ALSAFFAR</a></li>   
+                </ul>
+            </div>
+            <div class="right-nav">
+                <ul>
+                    <li><a href="about.html" class="menu-link1" data-section="about-me">About Me</a></li>
+                    <li><a href="contact.html" class="menu-link2" data-section="contact">Contact Me</a></li>   
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="experience">
+            <h1>Experience</h1>
+
+            <p>
+                I have worked in an Agile team as part of three courses (Databases, Backend, Frontend) to develop a web-based application. Throughout these projects, I planned and executed sprints, including sprint demos and retrospectives, which provided me with a solid understanding of Agile methodologies. 
+                I implemented authentication flows and ensured data management with PostgreSQL to guarantee a secure and efficient application. 
+                I used GitHub to manage issues, pull requests, and implement branching strategies throughout the project, enhancing my ability to collaborate effectively within a team and manage code changes. 
+                On the frontend side, I developed user interfaces using React, and on the backend, I worked with Spring to create robust services, ensuring smooth workflows across the application. 
+                These experiences have provided me with a strong foundation in Full Stack development, and I look forward to applying these skills in future projects. 
+                As part of my professional development, I would like to showcase my recent job roles:
+            </p>
+            
+            
+            <!-- Experience Container -->
+            <div class="experience-container">
+                <div class="job-box">
+                    <h3>Sales Leader (October 2023 – April 2024)</h3>
+                    <ul>
+                        <li>Ensure and deliver excellent customer service in the store.</li>
+                        <li>Support the store manager in daily operations and ensure that results are achieved.</li>
+                        <li>Ensure the store meets our core values of customer friendliness, product availability, freshness, and cleanliness.</li>
+                    </ul>
+                </div>
+
+                <div class="job-box">
+                    <h3>Assistant Sales Leader (September 2021 – Present)</h3>
+                    <ul>
+                        <li>Work closely with the store manager and sales leader, actively participating in store operations.</li>
+                        <li>Responsibilities include stocking products, operating the cash register, ensuring products are presented according to Lidl's concept, and creating a welcoming store environment for customers.</li>
+                    </ul>
+                </div>
+                <section class="mini-contact-note">
+                    <p>Have any questions? Don’t hesitate to <a href="contact.html">reach out</a> — I’d be happy to connect!</p>
+                  </section>
+                  
+            </div>
+        </section>
+
+        <!-- Carousel Section -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item"><a href="experience.html"><img src="/images/new_experince-removebg-preview (1).png" alt="Experience Image" /></a></div>
+                <div class="carousel-item"><a href="projects.html"><img src="/images/Projects.png" alt="Projects Image" /></a></div>
+                <div class="carousel-item"><a href="education.html"><img src="/images/new education.png" alt="Education" /></a></div>
+                <div class="carousel-item"><a href="skills.html"><img src="/images/skillmain-removebg-preview.png" alt="Skills" /></a></div>
+                <div class="carousel-item"><a href="interests.html"><img src="/images/interests.png" alt="Interests" /></a></div>
+                <div class="carousel-item"><a href="cv.html"><img src="/images/Cv  .png" alt="CV" /></a></div>
+            </div>
+        </div>
+    </main>
+
     <footer>
-        <p>
-            &copy; 2025 shams alsaffar 
-        </p>
+        <p>&copy; 2025 Shams Alsaffar</p>
     </footer>
+
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const items = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        // Clone the first item and append it to the end (to create a circular movement)
+        const firstClone = items[0].cloneNode(true);
+        carousel.appendChild(firstClone);
+
+        function getVisibleItemsCount() {
+            const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+            const itemWidth = items[0].offsetWidth;
+            return Math.floor(containerWidth / itemWidth);
+        }
+
+        function moveCarousel() {
+            const itemWidth = items[0].offsetWidth;
+            const visibleCount = getVisibleItemsCount();
+            currentIndex++;
+
+            carousel.style.transition = "transform 0.5s ease-in-out";
+            carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+
+            const totalItems = document.querySelectorAll('.carousel-item').length;
+            // If we reach the end of the carousel (the last visible items)
+            if (currentIndex >= totalItems - visibleCount) {
+                setTimeout(() => {
+                    carousel.style.transition = "none";
+                    carousel.style.transform = "translateX(0px)";
+                    currentIndex = 0;
+                }, 500);
+            }
+        }
+
+        setInterval(moveCarousel, 1500); // Adjust timing as needed
+    </script>
 </body>
+</html>
