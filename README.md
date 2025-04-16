@@ -83,6 +83,7 @@ I slutet av sidan finns en interaktiv karusell som visar länkar till andra sekt
         </div>
     </div>
 </div>
+```
 
 ### JavaScript-funktionalitet
 - Automatisk rörelse: Karusellen rör sig kontinuerligt åt vänster med ett jämnt intervall.
