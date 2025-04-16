@@ -96,5 +96,41 @@ contactForm.addEventListener('submit', function(e) {
 });
 
 
+// språk section
+
+// function för öppna och stäng language lista
+function toggleLanguageMenu(){
+  const menu = document.getElementById('language-menu');
+
+  // change mellan visa och gömma lista
+  menu.style.display = menu.style.display === 'block' ? 'none':'block';
+}
+function changeLanguage(lang){
+  // Hämta all element med data-lang attribut 
+  const element=document.querySelectorAll('[data-lang]');
+
+ // gå igenom alla element och visa eller dölja beronde på valt språk
+ element.forEach(element=> {
+  if (element.getAttribute('data-lang') === lang){
+    element.style.display ='block'; // visa text
+   }
+  else {
+    element.style.display ='none'; // dölja text
+  }
+ });
+
+ // stäng språk lista efter man välja språket 
+ document.getElementById('language-menu').style.display = 'none';
+
+  // spara det valda språket i localStorge så det hållas efter att sidan laddas om 
+  localStorage.setItem('language',lang);
+}
+
+// Hämta det valda språket från localStorage när sidan laddas 
+document.addEventListener("DOMContentLoaded", function(){
+  const lang = localStorage.getItem('language') || 'en' ; // standard language
+  changeLanguage(lang);
+});
+
 
   
