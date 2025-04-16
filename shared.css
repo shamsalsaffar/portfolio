@@ -219,11 +219,11 @@ footer {
     color: #fff;
 }
 
-/*--- END OF ABOUT SECTION--*/
+/*==== END OF ABOUT SECTION===*/
 
 
 
-/*-- SKILLS SECTION --*/
+/*======SKILLS SECTION =====*/
 body.skills-page {
   
    
@@ -340,7 +340,7 @@ body.skills-page {
   /*== END OF SKILLS SECTION ==*/
 
 
-                    /*==== CONTACT SECTION===*/
+  /*==== CONTACT SECTION===*/
   /* توسيط العنوان */
   body.contact-page {
     display: flex ;

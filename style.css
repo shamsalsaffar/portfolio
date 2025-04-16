@@ -291,7 +291,7 @@ footer{
   margin-bottom: 0;
   
 }
-/*---- ABOUT ME SECTION ----*/
+/*==== ABOUT ME SECTION ====*/
 
 body.about-page {
   text-align: center;
@@ -418,9 +418,9 @@ body.about-page {
   }
 }
 
+/*========= END OF ABOUT ME SECTION =========*/
 
-
-/*---- PROJECTS SECTION----*/
+/*====== PROJECTS SECTION======*/
 .projects-page header {
   background-color: #4d4c4c; /* header färg */
   color: white;
