@@ -29,7 +29,10 @@
         </nav>
       
     </header>
+    <audio id="welcomeAudio" src="audio/shams.mp3"></audio>
+
     <main>
+     
         <section id="portfolio">
             <h2>SHAMS ALSAFFAR</h2>
             <p>Java Developer student looking for an internship </p>
@@ -117,7 +120,24 @@
             once: true // الأنميشن يظهر فقط أول مرة عند التمرير
           });
         </script>
+       <script>
+  const audio = document.getElementById("welcomeAudio");
 
+  // Funktion för att spela ljudet vid scroll
+  function playAudioOnScroll() {
+    // Kontrollera att ljudet inte spelas redan
+    if (audio.paused) {
+      audio.play();
+    }
+    // Ta bort eventlistener efter att ljudet spelat en gång
+    document.removeEventListener("scroll", playAudioOnScroll);
+  }
+
+  // Lägg till scroll-eventlyssnare
+  document.addEventListener("scroll", playAudioOnScroll);
+</script>
+
+        
 
     
 </body>
