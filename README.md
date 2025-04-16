@@ -225,6 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const lang = localStorage.getItem('language') || 'en';
   changeLanguage(lang);
 });
+```
 
 ### Språkhantering med JavaScript i HTML sidan 
 som ledar att **EN** blir standard språk på sidan 
