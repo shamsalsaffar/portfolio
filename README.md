@@ -146,8 +146,7 @@ Denna JavaScript-kod tillåter användaren att klicka på olika färdighetsobjek
     });
   });
 </script>
-
-
+```
 
 - **JavaScript-funktionalitet**:
   - När en färdighetsobjekt klickas på, triggas visningen av en beskrivning.
@@ -250,6 +249,7 @@ som ledar att **EN** blir standard språk på sidan
     changeLanguage('en');
   };
 </script>
+```
 
 
 
