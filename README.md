@@ -100,7 +100,7 @@ Denna sida visar projekten i portfolion för Shams AlSaffar, med en responsiv de
 ### Modalfunktionalitet
 För varje projekt finns en **modal** som visar detaljerad information om projektet när användaren klickar på "More Details"-knappen. Modalen är en pop-up ruta som öppnas över sidan och visar information som projektets mål, teknologier som användes, och en kort beskrivning av resultatet. Denna funktion gör att användaren kan få djupare insikt i varje projekt utan att behöva navigera bort från sidan. Efter att modalen öppnas kan användaren stänga den genom att klicka på en "stäng"-knapp eller utanför modalen för att återgå till huvudprojektet.
 
-## Skills Section
+## Skills Page
 Visar färdigheter som Java-utvecklare, inklusive en karusell för att navigera mellan olika sektioner. En enkel sida som innehåller färdigheter och en kort beskrivning för varje färdighet, där JavaScript används för att implementera detta.
 
 ### Dynamisk beskrivning av färdigheter
@@ -152,18 +152,18 @@ Denna JavaScript-kod tillåter användaren att klicka på olika färdighetsobjek
   - När en färdighetsobjekt klickas på, triggas visningen av en beskrivning.
   - Karusellen rör sig automatiskt med ett intervall på 1,5 sekunder och visar en ny bild varje gång.
 
-## Education section
+## Education Page
 Visar utbildningshistorik i form av en tidslinje.
 
 - **Struktur**:
   - **Header**: Innehåller länkar till "About Me" och "Contact Me".
-  - **Main-sektion**: Visar två utbildningserfarenheter (Java Developer Program och Computer Science) i en tidslinje.
+  - **Main-sektion**: Visar två utbildningserfarenheter (Java Developer Program och Computer Science) i en section.
 
 ### JavaScript-funktionalitet
 - Karusellen rör sig automatiskt varje 1,5 sekund.
 - Oändlig loop när karusellen når slutet.
 
-## Interest section
+## Interests Page
 Visar Shams Alsaffars personliga intressen och familjemomentsbilder.
 
 - **Funktioner**:

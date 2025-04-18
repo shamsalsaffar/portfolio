@@ -596,6 +596,8 @@ nav a:hover {
     margin: 5px;
     padding: 0;
     border-radius: 16px;
+    filter: brightness(1.2); /* Ökar ljusstyrkan */
+  transition: filter 0.3s ease; /* Lägger till en smidig övergång när effekten aktiveras */
   }
   
   /* Style for Timeline and other sections */
@@ -842,7 +844,8 @@ nav a:hover {
   display: block;
   margin: 5px;
   padding: 0;
-  border-radius: 16px;
+  border-radius: 16px;filter: brightness(1.2); /* Ökar ljusstyrkan */
+  transition: filter 0.3s ease; /* Lägger till en smidig övergång när effekten aktiveras */
 }
 
 /* Style for Timeline and other sections */
@@ -978,6 +981,8 @@ nav a:hover {
   margin: 5px;
   padding: 0;
   border-radius: 16px;
+  filter: brightness(1.2); /* Ökar ljusstyrkan */
+  transition: filter 0.3s ease; /* Lägger till en smidig övergång när effekten aktiveras */
 }
 
 /* Style for Timeline and other sections */
