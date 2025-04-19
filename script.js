@@ -37,20 +37,20 @@ const skillItems = document.querySelectorAll('.skill-item');
     const descriptionDiv = document.getElementById("description");
 
     const descriptions = {
-      Java: 'Java is a high-level, class-based, object-oriented programming language used for building scalable and secure applications.',
-      HTML: 'HTML is the standard markup language used to create web pages and web applications.',
-      CSS: 'CSS is used for styling and designing the layout of web pages, allowing developers to create responsive designs.',
-      JavaScript: 'JavaScript is a programming language used to create interactive effects within web browsers.',
-      Postgres: 'PostgreSQL is an open-source relational database management system that is highly extensible and supports complex queries.',
-      MongoDB: 'MongoDB is a NoSQL database that stores data in flexible, JSON-like documents, making it scalable and easy to work with.',
-      "REST API": 'REST (Representational State Transfer) API is a set of web services that allows systems to communicate over HTTP.',
-      GitHub: 'GitHub is a platform for hosting and version control of software development projects using Git.',
-      Maven: 'Maven is a build automation tool used primarily for Java projects, helping with dependency management and project configuration.',
-      "Node.js": 'Node.js is a JavaScript runtime built on Chrome\'s V8 engine, enabling server-side JavaScript development.',
-      Docker: 'Docker is a platform for developing, shipping, and running applications in containers, making deployment easier and more consistent.',
-      React: 'React is a JavaScript library for building user interfaces, especially for single-page applications with a component-based architecture.'
+      Java: 'Jag har lärt mig grunderna i Java och använt det för att bygga backend-logik i mina skolprojekt, bland annat med Spring Boot.',
+      HTML: 'Jag använder HTML för att strukturera innehållet på mina webbsidor och skapa en tydlig layout för användaren.',
+      CSS: 'Med hjälp av CSS kan jag designa och styla mina webbsidor, och jag har jobbat mycket med responsiv design för att anpassa dem till olika skärmstorlekar.',
+      JavaScript: 'Jag använder JavaScript för att göra mina webbsidor interaktiva, till exempel genom att skapa menyer, sliders och valideringsfunktioner.',
+      Postgres: 'Jag har arbetat med PostgreSQL i skolprojekt där vi lagrade och hanterade data i en relationsdatabas.',
+      MongoDB: 'Jag har testat MongoDB i projekt där en mer flexibel datamodell behövdes, särskilt med dokumentlagring i JSON-format.',
+      "REST API": 'Jag har byggt och använt REST API:er för att koppla frontend och backend, vilket har hjälpt mig att förstå hur olika delar av en applikation kommunicerar.',
+      GitHub: 'Jag använder GitHub för versionshantering, samarbete i team och för att visa upp mina projekt.',
+      Maven: 'Jag har använt Maven i Java-projekt för att hantera beroenden och strukturera projekt på ett smidigt sätt.',
+      "Node.js": 'Jag har börjat utforska Node.js för att förstå hur man kan köra JavaScript även på serversidan.',
+      Docker: 'Jag har grundläggande förståelse för Docker och hur det används för att paketera applikationer i containrar för enklare distribution.',
+      React: 'Jag har byggt gränssnitt i React under frontendkursen, vilket har hjälpt mig att förstå komponentbaserad utveckling och hur man jobbar med state och props.'
     };
-
+    
     skillItems.forEach(item => {
       item.addEventListener("click", () => {
         const skill = item.textContent.trim(); // Läs själva texten (t.ex. "Java")

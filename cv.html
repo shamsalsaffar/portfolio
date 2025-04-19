@@ -221,23 +221,34 @@
 
         setInterval(moveCarousel, 1500); // Adjust timing as needed
     </script>
-    <script>
-        function changeLanguage(lang) {
-          document.querySelectorAll('[data-lang]').forEach(el => {
-            el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
-          });
-        }
-      
-        function toggleLanguageMenu() {
-          const menu = document.getElementById('language-menu');
-          menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-        }
-      
-        // Set default language on page load
-        window.onload = () => {
-          changeLanguage('en');
-        };
-      </script>
+  <script>
+    // Växla språklistan (öppna/stäng)
+    function toggleLanguageMenu() {
+      const menu = document.getElementById('language-menu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  
+    // Byta språk
+    function changeLanguage(lang) {
+      // Visa/dölj innehåll beroende på språk
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+  
+      // Stäng språkmenyn automatiskt
+      document.getElementById('language-menu').style.display = 'none';
+  
+      // Spara språket i localStorage
+      localStorage.setItem('language', lang);
+    }
+  
+    // Använd tidigare valt språk när sidan laddas
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('language') || 'en';
+      changeLanguage(savedLang);
+    });
+  </script>
+  
       
 </body>
 </html>
