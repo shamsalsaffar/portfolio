@@ -920,6 +920,20 @@ a.more-details:hover {
   }
 
 @media (max-width: 480px) {
+  .image-overlay-container{
+    grid-template-columns: repeat(2,fr1);
+   }
+   .image-overlay-container img{
+     width:50%;
+     min-height: 100%;
+     max-width: 100%;
+     height: 50%;
+   
+   }
+       .overlay-text {
+        font-size: 16px;
+      
+       }
   header{
     padding-left: 0rem;
     padding-right: 0rem;
@@ -977,6 +991,7 @@ a.more-details:hover {
 
   .about-image img {
     max-width: 90%;  /* Bilden får ta upp mer plats på riktigt små skärmar */
+  margin-bottom: 5rem;
   }
 
   .about-text {
@@ -1030,10 +1045,10 @@ a.more-details:hover {
  grid-template-columns: repeat(2,fr1);
 }
 .image-overlay-container img{
-  width:55%;
+  width:50%;
   min-height: 100%;
   max-width: 100%;
-  height: 55%;
+  height: 50%;
 
 }
     .overlay-text {
@@ -1112,6 +1127,7 @@ a.more-details:hover {
   
     .about-image img {
       max-width: 90%;  /* Bilden får ta upp mer plats på riktigt små skärmar */
+    margin-bottom: 4rem;
     }
   
     .about-text {
